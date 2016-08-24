@@ -2,10 +2,10 @@ package serenitylabs.tutorials.vetclinic.domain;
 
 public class Dog {
 
-	private String name;
-	private String breed;
-	private String colour;
-	private int age;
+	private final String name;
+	private final String breed;
+	private final String colour;
+	private final int age;
 
 	public Dog(String name, String breed, int age, String colour) {
 		this.name = name;
@@ -43,9 +43,8 @@ public class Dog {
 	
 		public static class DogBuilder{
 
-			private String name;
+			private final String name;
 			private String breed;
-			private String colour;
 			private int age;
 
 			public DogBuilder(String name) {
@@ -64,7 +63,6 @@ public class Dog {
 			}
 
 			public Dog andOfColour(String colour) {
-				this.colour=colour;
 				return new Dog(name,breed,age,colour);
 			}
 			

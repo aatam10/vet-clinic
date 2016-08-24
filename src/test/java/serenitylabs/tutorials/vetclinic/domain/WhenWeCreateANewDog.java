@@ -7,7 +7,7 @@ public class WhenWeCreateANewDog {
 
 	
 	@Test
-	public void a_New_Dog_Shoud_Have_A_Name(){
+	public void a_New_Dog_Shoud_Have_A_Name_And_Age_And_Breed_And_A_Colour(){
 		Dog fido = Dog.called("Fido").withAge(3).ofBreed("Labrador").andOfColour("Black");
 		
 
