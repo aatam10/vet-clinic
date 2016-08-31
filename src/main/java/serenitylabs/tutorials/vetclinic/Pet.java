@@ -39,24 +39,46 @@ public class Pet {
         double totalEaten = 0.0;
 
         for(Meal meal : mealsGiven) {
-            if ((breed == Breed.Cat) && (meal.getFoodBrand() == PetFood.KittyKat)) {
-                totalEaten = totalEaten + meal.getAmountInGrams();
-            } else if ((breed == Breed.Dog) && (meal.getFoodBrand() == PetFood.FidosFood)) {
-                totalEaten = totalEaten + meal.getAmountInGrams();
-            }
+            totalEaten = getTotalEaten(totalEaten, meal);
         }
-        double amountNeeded = 0.0;
-        if (breed == Breed.Cat) {
-            amountNeeded = getWeightInKilos() * 10;
-        } else if (breed == Breed.Dog) {
-            amountNeeded = getWeightInKilos() * 20;
-        }
+        double amountNeeded = amountNeeded();
 
         return (totalEaten >= amountNeeded);
     }
 
-    public void feed(double amountInGrams, PetFood foodBrand) {
-        mealsGiven.add(new Meal(amountInGrams, foodBrand));
+    private double amountNeeded() {
+        double amountNeed = 0.0;
+        if (breed == Breed.Cat) {
+            amountNeed = amountNeededForCat();
+        } else if (breed == Breed.Dog) {
+            amountNeed = amountNeededForDog();
+        }
+        return amountNeed;
+    }
+
+    private double amountNeededForDog() {
+        return getWeightInKilos() * 20;
+
+    }
+
+    private double amountNeededForCat() {
+
+        return getWeightInKilos() * 10;
+
+    }
+
+    private double getTotalEaten(double totalEaten, Meal meal) {
+        if ((breed == Breed.Cat) && (meal.getFoodBrand() == PetFood.KittyKat)) {
+            totalEaten = totalEaten + meal.getAmountInGrams();
+        } else if ((breed == Breed.Dog) && (meal.getFoodBrand() == PetFood.FidosFood)) {
+            totalEaten = totalEaten + meal.getAmountInGrams();
+        }
+        return totalEaten;
+    }
+
+    public void eat(Meal meal) {
+
+        mealsGiven.add(meal);
     }
 
     public static class PetBuilder {
@@ -70,7 +92,7 @@ public class Pet {
         public PetBuilder weighing(double weight) {
             this.weight = weight;
             return this;
-        }
+            }
 
         public Pet named(String name) {
             return new Pet(name, breed, weight);
