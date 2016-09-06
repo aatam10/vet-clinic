@@ -26,6 +26,8 @@ public class PetHotel {
         this(name, new GuestList(), new WaitingList());
     }
 
+
+
     public List<Pet> getPets() {
         return guestList.getGuests();
     }
