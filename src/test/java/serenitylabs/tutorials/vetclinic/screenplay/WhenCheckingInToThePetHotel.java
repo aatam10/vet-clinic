@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import serenitylabs.tutorials.vetclinic.model.Pet;
 import serenitylabs.tutorials.vetclinic.model.PetHotel;
+import serenitylabs.tutorials.vetclinic.screenplay.questions.TheGuestInWaitingList;
 import serenitylabs.tutorials.vetclinic.screenplay.questions.TheRegisteredGuest;
 import serenitylabs.tutorials.vetclinic.screenplay.tasks.CheckIn;
 import serenitylabs.tutorials.vetclinic.screenplay.tasks.CheckOut;
@@ -30,14 +31,10 @@ public class WhenCheckingInToThePetHotel {
         Actor petra = Actor.named("Petra the Cat Owner");
         Pet ginger = Pet.cat().named("Ginger");
         PetHotel petHotel = PetHotel.called("Hotel_PetsInn");
-
         petra.attemptsTo(
                 CheckIn.aPet(ginger).into(petHotel)
-//                new CheckIn(ginger,petHotel)
         );
-
         //assertThat(petHotel.getPets(), hasItem(ginger));
-        //petra.should(seeThat(TheRegisteredGuest.in(petHotel)),hasItem(ginger));
         petra.should(seeThat(TheRegisteredGuest.in(petHotel),hasItem(ginger)));
     }
 
@@ -54,6 +51,27 @@ public class WhenCheckingInToThePetHotel {
                     CheckOut.aPet(ginger).from(petHotel)
                 );
 
-        assertThat(petHotel.getPets(),not(hasItem(ginger)));
+      //  assertThat(petHotel.getPets(),not(hasItem(ginger)));
+        petra.should(seeThat(TheRegisteredGuest.in(petHotel),not(hasItem(ginger))));
     }
+
+    @Test
+    public void petra_checks_her_cat_in_when_hotel_is_full() {
+        Actor petra = Actor.named("Petra the Cat Owner");
+        Pet ginger = Pet.cat().named("Ginger");
+        PetHotel petHotel = APetHotel.with(20).petsCheckedIn();
+
+        petra.attemptsTo(CheckIn.aPet(ginger).into(petHotel));
+
+        petra.should(seeThat(TheRegisteredGuest.in(petHotel),not(hasItem(ginger))));
+
+        petra.should(seeThat(TheGuestInWaitingList.in(petHotel),hasItem(ginger)));
+    }
+
 }
+
+
+
+
+
+
