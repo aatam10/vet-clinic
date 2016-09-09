@@ -15,6 +15,7 @@ These tutorials are designed to be used as the basis of small coding exercises (
 
 The domain is a simple one. We are writing an application for a Vet clinic, where you can take your pets to be treated when they are sick. At the vet clinic, we need to be able to register new animals when they arrive for treatment.
 
+<<<<<<< HEAD
 In the exercises for this tutorial we will be writing basic tests using the Screenplay pattern.
 
 ## Exercise 1 - checking in to a pet hotel
@@ -162,3 +163,26 @@ Implement the CheckOut class (don't copy-paste!):
    - Implement the `performAs()` method.
    
 Now run the test and check that the correct reporting appears in the Serenity HTML report in the `target/site/serenity` directory.
+=======
+## Exercises
+
+These exercises involve working with the Dojo TodoMVC web site (http://todomvc.com/examples/dojo/#/). The test skeletons for these exercises can be found in the WhenLocatingElements class.
+
+### Exercise 1 - Find the new todo field by ID
+
+### Exercise 2 - Find the quote block by tag
+
+### Exercise 3 - Find the source link by link text
+
+### Exercise 4 - Find the new todo field by CSS
+
+### Exercise 5 - Find the new todo field by class
+
+### Exercise 6 - Find the quote block by CSS
+
+### Exercise 7 - Find the new todo field by XPATH
+
+### Exercise 8 - Find the todo entries by CSS
+
+   
+>>>>>>> upstream/webdriver/locators/start

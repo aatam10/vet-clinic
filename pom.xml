@@ -32,26 +32,51 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
             <version>1.3</version>
+<<<<<<< HEAD
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>19.0</version>
+=======
+            <scope>test</scope>
+>>>>>>> upstream/webdriver/locators/start
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
+<<<<<<< HEAD
             <version>${serenity.version}</version>
+=======
+            <version>1.1.37-rc.8</version>
+            <scope>test</scope>
+>>>>>>> upstream/webdriver/locators/start
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
+<<<<<<< HEAD
             <version>${serenity.version}</version>
+=======
+            <version>1.1.37-rc.8</version>
+            <scope>test</scope>
+>>>>>>> upstream/webdriver/locators/start
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay</artifactId>
+<<<<<<< HEAD
             <version>${serenity.version}</version>
+=======
+            <version>1.1.37-rc.8</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-screenplay-webdriver</artifactId>
+            <version>1.1.37-rc.8</version>
+            <scope>test</scope>
+>>>>>>> upstream/webdriver/locators/start
         </dependency>
     </dependencies>
     <build>
