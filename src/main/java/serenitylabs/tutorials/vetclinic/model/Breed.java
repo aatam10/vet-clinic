@@ -1,5 +1,5 @@
-package serenitylabs.tutorials.vetclinic.model;
-
-public enum Breed {
-    Cat, Dog, Rabbit, Fish, Parrot
-}
+//package serenitylabs.tutorials.vetclinic.model;
+//
+//public enum Breed {
+//    Cat, Dog, Rabbit, Fish, Parrot
+//}

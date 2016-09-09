@@ -50,6 +50,7 @@ public class WhenLocatingElements {
         assertThat(completedButton.getText(), equalTo("Source"));
     }
 
+
     @Test
     public void finding_the_new_todo_field_by_css() {
         WebElement todoField = driver.findElement(By.cssSelector("#new-todo"));

@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.screenplay.questions;
 
 import net.serenitybdd.screenplay.Actor;
@@ -8,9 +9,11 @@ import serenitylabs.tutorials.vetclinic.model.PetHotel;
 
 import java.util.List;
 
+*/
 /**
  * Created by aatchoud on 9/6/2016.
- */
+ *//*
+
 @Subject("The Pet hotel")
 public class TheRegisteredGuest implements Question<List<Pet>> {
 
@@ -30,3 +33,4 @@ public class TheRegisteredGuest implements Question<List<Pet>> {
         return new TheRegisteredGuest(petHotel);
     }
 }
+*/

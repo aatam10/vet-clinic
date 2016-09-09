@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.screenplay;
 
 import com.google.common.collect.ImmutableList;
@@ -10,9 +11,11 @@ import serenitylabs.tutorials.vetclinic.model.WaitingList;
 import java.util.List;
 import java.util.Random;
 
+*/
 /**
  * A utility class to generate pet hotels with pets already booked
- */
+ *//*
+
 public class APetHotel {
     public static PetAdder with(int petCount) {
         return new PetAdder(petCount);
@@ -51,3 +54,4 @@ public class APetHotel {
         }
     }
 }
+*/

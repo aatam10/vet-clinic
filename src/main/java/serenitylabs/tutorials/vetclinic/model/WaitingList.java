@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 import com.google.common.collect.ImmutableList;
@@ -25,3 +26,4 @@ public class WaitingList {
         return ImmutableList.copyOf(waitingList);
     }
 }
+*/

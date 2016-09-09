@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 public class PlacedOnWaitingList extends BookingResponse {
@@ -15,3 +16,4 @@ public class PlacedOnWaitingList extends BookingResponse {
         return true;
     }
 }
+*/

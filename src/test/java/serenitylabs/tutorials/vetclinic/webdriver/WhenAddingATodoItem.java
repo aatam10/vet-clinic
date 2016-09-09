@@ -31,7 +31,6 @@ public class WhenAddingATodoItem {
         WebElement todoListContents = driver.findElement(By.id("todo-list"));
         assertThat(todoListContents.getText(), containsString("Buy some milk"));
 
-
         driver.quit();
     }
 

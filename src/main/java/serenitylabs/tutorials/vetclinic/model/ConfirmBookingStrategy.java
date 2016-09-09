@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 import java.util.Collection;
@@ -15,3 +16,4 @@ public class ConfirmBookingStrategy implements CheckInStrategy {
         return BookingResponse.confirmedFor(pet);
     }
 }
+*/

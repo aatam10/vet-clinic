@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.screenplay;
 
 
@@ -18,9 +19,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.not;
 
+*/
 /**
  * Created by aatchoud on 9/6/2016.
- */
+ *//*
+
 
 @RunWith(SerenityRunner.class)
 public class WhenCheckingInToThePetHotel {
@@ -75,3 +78,4 @@ public class WhenCheckingInToThePetHotel {
 
 
 
+*/

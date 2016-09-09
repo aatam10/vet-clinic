@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 public class WaitingListStrategy implements CheckInStrategy {
@@ -13,3 +14,4 @@ public class WaitingListStrategy implements CheckInStrategy {
         return BookingResponse.waitingListFor(pet);
     }
 }
+*/

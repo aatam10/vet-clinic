@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 public class BookingConfirmation extends BookingResponse {
@@ -15,3 +16,4 @@ public class BookingConfirmation extends BookingResponse {
         return false;
     }
 }
+*/

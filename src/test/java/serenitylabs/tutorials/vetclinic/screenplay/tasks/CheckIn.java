@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.screenplay.tasks;
 
 import net.serenitybdd.core.pages.PageObject;
@@ -8,9 +9,11 @@ import net.thucydides.core.annotations.Step;
 import serenitylabs.tutorials.vetclinic.model.Pet;
 import serenitylabs.tutorials.vetclinic.model.PetHotel;
 
+*/
 /**
  * Created by aatchoud on 9/6/2016.
- */
+ *//*
+
 public class CheckIn implements Performable {
     private final Pet pet;
     private final PetHotel petHotel;
@@ -43,3 +46,4 @@ public class CheckIn implements Performable {
         }
     }
 }
+*/

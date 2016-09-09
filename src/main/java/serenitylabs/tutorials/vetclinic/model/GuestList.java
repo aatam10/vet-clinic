@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 import com.google.common.collect.ImmutableList;
@@ -27,3 +28,4 @@ public class GuestList {
         return pets.remove(pet);
     }
 }
+*/

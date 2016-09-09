@@ -1,3 +1,4 @@
+/*
 package serenitylabs.tutorials.vetclinic.model;
 
 import com.google.common.base.Objects;
@@ -55,3 +56,4 @@ public class Pet {
         return Objects.hashCode(name, breed);
     }
 }
+*/
