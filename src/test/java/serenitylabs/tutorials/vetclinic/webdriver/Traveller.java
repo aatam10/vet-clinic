@@ -51,6 +51,7 @@ public class Traveller {
         driver.findElement(TripPlannerForm.TO_STATION).sendKeys(station);
     }
 
+
     public void depatureStationIs(String station) {
         driver.findElement(TripPlannerForm.FROM_STATION).sendKeys(station);
     }

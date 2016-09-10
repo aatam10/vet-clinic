@@ -30,4 +30,5 @@ public class TripPlannerForm {
     public static By departureButtonfor(DeparturePreference departurePreference) {
         return DEPARTURE_RADIO_BUTTONS.get(departurePreference);
     }
+
 }

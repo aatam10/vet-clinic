@@ -27,6 +27,7 @@ public class WhenLookingForAPetStore {
         assertThat(driver.getTitle(), equalTo("pet store at DuckDuckGo"));
 
         driver.quit();
+
     }
 }
 

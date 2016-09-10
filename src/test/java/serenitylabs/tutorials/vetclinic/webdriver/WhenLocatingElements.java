@@ -48,6 +48,7 @@ public class WhenLocatingElements {
         WebElement completedButton = driver.findElement(By.linkText("Source"));
 
         assertThat(completedButton.getText(), equalTo("Source"));
+
     }
 
 

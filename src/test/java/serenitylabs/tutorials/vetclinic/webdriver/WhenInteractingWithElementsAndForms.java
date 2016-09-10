@@ -59,6 +59,7 @@ public class WhenInteractingWithElementsAndForms {
         assertThat(rememberMeChoice, is(true));
     }
 
+
     @Test
     public void click_on_a_radio_button() {
 

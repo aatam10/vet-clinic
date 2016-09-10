@@ -15,4 +15,5 @@ public enum TravelDay {
     public int getDaysInFuture() {
         return daysInFuture;
     }
+
 }

@@ -34,6 +34,7 @@ public class WhenBookingATrain {
         driver.get("http://www.sydneytrains.info/");
     }
 
+
     @Test
     public void should_be_able_to_plan_a_trip() {
 

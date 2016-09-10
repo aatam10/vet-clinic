@@ -75,7 +75,8 @@ public class TripPreferences {
 
     private String shortened(String selectedDay) {
         return selectedDay.split("\\(")[0].trim();
-    }
+        }
+
 
     @Override
     public int hashCode() {

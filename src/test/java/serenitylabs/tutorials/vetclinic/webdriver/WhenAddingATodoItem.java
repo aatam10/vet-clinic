@@ -32,6 +32,7 @@ public class WhenAddingATodoItem {
         assertThat(todoListContents.getText(), containsString("Buy some milk"));
 
         driver.quit();
+
     }
 
 }

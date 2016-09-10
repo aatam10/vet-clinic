@@ -12,4 +12,5 @@ public class TripSummaryView {
     public static final By HOUR = By.id("selectHour");
     public static final By MINUTE = By.id("selectMinute");
     public static final By DAY = By.id("itdDateDayMonthYear");
+
 }
