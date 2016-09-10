@@ -12,11 +12,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.text.DecimalFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import static serenitylabs.tutorials.vetclinic.webdriver.DeparturePreference.ArriveBefore;
+import static serenitylabs.tutorials.vetclinic.webdriver.DeparturePreference.LeaveAfter;
+import static serenitylabs.tutorials.vetclinic.webdriver.TravelDay.Tomorrow;
 
 public class WhenBookingATrain {
     private WebDriver driver;
@@ -30,39 +36,38 @@ public class WhenBookingATrain {
 
     @Test
     public void should_be_able_to_plan_a_trip() {
-        driver.findElement(By.id("display_origin")).sendKeys("Town Hall");
-        driver.findElement(By.id("display_destination")).sendKeys("Parramatta");
-        driver.findElement(By.id("itdTripDateTimeArr")).click();
 
-        Select selectTimeDay = new Select(driver.findElement(By.id("itdDate")));
-        selectTimeDay.selectByIndex(1);
+        Traveller traveller = new Traveller(driver);
 
-        Select selectTimeHour = new Select(driver.findElement(By.id("itdTimeHour")));
-        selectTimeHour.selectByVisibleText("10");
+        traveller.depatureStationIs("Town Hall");
+        traveller.arrivalStationIs("Parramatta");
+        traveller.theTrainShould(ArriveBefore,10,15,Tomorrow);
+        traveller.planTrip();
 
-        Select selectTimeMinute = new Select(driver.findElement(By.id("itdTimeMinute")));
-        selectTimeMinute.selectByVisibleText("15");
-
-        driver.findElement(By.id("btnTripPlannerSubmit")).click();
 
         List<WebElement> optionsForTrip = driver.findElements(By.className("journeyValue"));
-
         assertThat(optionsForTrip.size(), is(greaterThan(0)));
 
-        String fromStation = driver.findElement(By.id("name_origin")).getAttribute("value");
-        String toStation = driver.findElement(By.id("name_destination")).getAttribute("value");
-        String arriveBeforePreference = new Select(driver.findElement(By.id("SelectArriveDepart"))).getFirstSelectedOption().getText();
-        String selectedHour = new Select(driver.findElement(By.id("selectHour"))).getFirstSelectedOption().getText();
-        String selectedMinute = new Select(driver.findElement(By.id("selectMinute"))).getFirstSelectedOption().getText();
-        String selectedDay = new Select(driver.findElement(By.id("itdDateDayMonthYear"))).getFirstSelectedOption().getText();
+        TripPreferences displayedTripPreferences = traveller.displayedTripPreferences();
 
-        assertThat(fromStation,containsString("Town Hall"));
-        assertThat(toStation,containsString("Parramatta"));
-        assertThat(arriveBeforePreference, equalTo("arrive before"));
-        assertThat(selectedHour, equalTo("10"));
-        assertThat(selectedMinute, equalTo("15"));
-        assertThat(selectedDay,containsString("Tomorrow"));
+        TripPreferences expectedTripPreferences
+                            = TripPreferences
+                            .arrivingOrDeparting("arrive before")
+                            .from("Town Hall Station, Sydney")
+                            .to("Parramatta Station, Parramatta")
+                            .arrivingOn("Tomorrow")
+                            .at("10","15");
+        assertThat(displayedTripPreferences,equalTo(expectedTripPreferences));
+
     }
+
+
+
+
+
+
+
+
 
     @After
     public void shutdown() {
